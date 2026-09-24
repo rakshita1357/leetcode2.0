@@ -15,10 +15,9 @@ public:
         int s=min(p->val,q->val);
         if(root==NULL) return root;
         while(root!=NULL){
-            if(root==p||root==q) return root;
             if(root->val>l) root=root->left;
             else if(root->val<s) root=root->right;
-            if(s<=root->val && root->val<=l) return root;
+            else return root;
         }
         return NULL;
     }

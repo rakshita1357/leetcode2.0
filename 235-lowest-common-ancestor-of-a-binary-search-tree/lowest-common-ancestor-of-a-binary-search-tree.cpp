@@ -13,6 +13,7 @@ public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         int l=max(p->val,q->val);
         int s=min(p->val,q->val);
+        if(root==p||root==q) return root;
         while(root!=NULL){
             if(root->val>l) root=root->left;
             else if(root->val<s) root=root->right;

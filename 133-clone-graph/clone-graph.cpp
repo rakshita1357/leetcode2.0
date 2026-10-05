@@ -23,7 +23,7 @@ class Solution {
 public:
     map<Node*, Node*> v;
     Node* cloneGraph(Node* node) {
-        if(node==NULL) return node;
+        if(node==NULL) return NULL;
         if(v.count(node)) return v[node];
         Node* nd=new Node(node->val);
         v[node]= nd;
